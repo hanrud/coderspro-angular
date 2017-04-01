@@ -1,4 +1,4 @@
-// Loopingw ith engRepeat
+// Looping with engRepeat
 
 
 var myApp = angular.module('myApp', []);
@@ -10,4 +10,9 @@ myApp.controller('myAppController', ['$scope', function myAppController($scope) 
         $scope.inputName = '';
     }
 
+    $scope.removeName = function (nameText) {
+        var i = $scope.names.indexOf(nameText);
+        $scope.names.splice(i, 1);
+
+    }
 }]);
