@@ -6,7 +6,8 @@ myApp.controller('myAppController', ['$scope', function myAppController($scope) 
     $scope.names = ["Basia", "Kasia", "Zosia"];
 
     $scope.addName = function () {
-        $scope.names.push($scope.inputName)
+        $scope.names.push($scope.inputName);
+        $scope.inputName = '';
     }
 
 }]);
