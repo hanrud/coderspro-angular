@@ -1,20 +1,17 @@
-<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="form">
-    <meta name="keywords" content="form">
-    <meta name="author" content="Hania">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angular</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Angular examples</title>
 </head>
-
 <body>
-<p id="before">
-</p>
-<script src='app.js'></script>
+    Name: <input id='textInput' type="text">
+    Hello!
+<script>
+    var textInputElement = document.getElementById('textInput');
+    textInputElement.addEventListener('keyup', function () {
+        var text = textInputElement.value;
+        console.log("key has been presed " + text);
+    })
+</script>
 </body>
-
 </html>
