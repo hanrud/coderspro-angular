@@ -1,18 +1,8 @@
-// Looping with engRepeat
-
-
 var myApp = angular.module('myApp', []);
 myApp.controller('myAppController', ['$scope', function myAppController($scope) {
-    $scope.names = ["Basia", "Kasia", "Zosia"];
-
-    $scope.addName = function () {
-        $scope.names.push($scope.inputName);
-        $scope.inputName = '';
-    }
-
-    $scope.removeName = function (nameText) {
-        var i = $scope.names.indexOf(nameText);
-        $scope.names.splice(i, 1);
-
-    }
+    $scope.countries = [
+        { name:"China", population: 1300000000 },
+        { name:"India", population: 1982365666 },
+        { name:"United States", population: 300000000 }
+    ];
 }]);
