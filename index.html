@@ -14,8 +14,10 @@
     </tr>
     <tr ng-repeat="country in countries">
         <td>{{ country.name }}</td>
-        <td>{{ country.population }}</td>
-        <td><img ng-src="{{ country.flag }}" alt="flag" width="120"> </td>
+        <td>{{ country.population | number }}</td>
+        <td><img ng-src="{{ country.flag }}" alt="flag" width="120"></td>
+        <td>{{ country.capital }}</td>
+        <td>{{ country.gdp | currency }}</td>
     </tr>
 </table>
 </body>
