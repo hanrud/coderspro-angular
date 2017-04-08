@@ -38,6 +38,23 @@ countryApp.factory('countries', ['$http', function ($http) {
     };
 }]);
 
+countryApp.directive('country', function () {
+    return {
+        // A - <div moja-dyrektywa></div>
+        // E - <moja-dyrektywa></moja-dyrektywa>
+        // C - < div class='{ moja-dyrektywa: parametr }'>
+        // M - dyrektywa tworzona poprzez komentarz
+        restrict: 'A',
+        scope: {
+            // = - two way data binding
+            // < - One way data binding
+            country: '='
+        },
+        templateUrl: 'country.html'
+    }
+});
+
+
 countryApp.controller('CountryListCtrl', ['$scope', 'countries',
     function ($scope, countries) {
         countries.list(function (countries) {
@@ -54,5 +71,4 @@ countryApp.controller('CountryDetailCtrl', ['$scope', '$routeParams', 'countries
         $scope.goBack = function () {
             window.history.back();
         }
-
     }]);
