@@ -52,7 +52,9 @@ countryApp.directive('country', function () {
         },
         templateUrl: 'country.html',
         controller: function ($scope, countries) {
-            console.log($scope.country);
+            countries.find($scope.country.id, function (country) {
+                $scope.country.flag = country.flag;
+            })
         }
     }
 });
