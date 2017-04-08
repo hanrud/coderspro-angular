@@ -50,7 +50,10 @@ countryApp.directive('country', function () {
             // < - One way data binding
             country: '='
         },
-        templateUrl: 'country.html'
+        templateUrl: 'country.html',
+        controller: function ($scope, countries) {
+            console.log($scope.country);
+        }
     }
 });
 
